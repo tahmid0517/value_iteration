@@ -155,7 +155,7 @@ def run_experiment(hyper):
                 mem.add_samples(mem_data)
 
             # Save the model:
-            if np.mod(step_i+1, 25) == 0:
+            if True or np.mod(step_i+1, 25) == 0:
                 model_file = f"data/{alg_name}_{system.name}_step_{step_i+1:03d}.torch"
                 torch.save({"epoch": step_i, "hyper": hyper, "state_dict": value_fun.state_dict()}, model_file)
 
